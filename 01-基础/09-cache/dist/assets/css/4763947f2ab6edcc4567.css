@@ -1,0 +1,19 @@
+/*!******************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/less-loader/dist/cjs.js!./style.css ***!
+  \******************************************************************************************************/
+.myColor {
+  color: red;
+}
+
+/*!*******************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!../node_modules/less-loader/dist/cjs.js!./style.less ***!
+  \*******************************************************************************************************/
+.world {
+  background: yellow;
+}
+.block-bg {
+  background: url(../../assets/images/test433a4.png) !important;
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXNzZXRzL2Nzcy80NzYzOTQ3ZjJhYjZlZGNjNDU2Ny5jc3MiLCJtYXBwaW5ncyI6Ijs7O0FBQUE7RUFDSTtBQUNKOzs7OztBQ0RBO0VBQ0k7QUFBSjtBQUVBO0VBQ0k7QUFBSiIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3N0eWxlLmNzcyIsIndlYnBhY2s6Ly8vLi9zdHlsZS5sZXNzIl0sInNvdXJjZXNDb250ZW50IjpbIi5teUNvbG9ye1xuICAgIGNvbG9yOiByZWQ7XG59IiwiQGJnOiB5ZWxsb3c7XG4ud29ybGQgeyBcbiAgICBiYWNrZ3JvdW5kOiBAYmc7XG59XG4uYmxvY2stYmd7XG4gICAgYmFja2dyb3VuZDogdXJsKC4vc3JjL2Fzc2V0cy90ZXN0LnBuZykgIWltcG9ydGFudDtcbn0iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=*/

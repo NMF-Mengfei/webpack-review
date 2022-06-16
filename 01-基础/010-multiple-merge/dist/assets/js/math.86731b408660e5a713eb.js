@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebpack_study=self.webpackChunkwebpack_study||[]).push([[600],{52:(s,e,u)=>{u.r(e),u.d(e,{add:()=>c,multi:()=>k});const c=(s,e)=>s+e,k=(s,e)=>s*e}}]);

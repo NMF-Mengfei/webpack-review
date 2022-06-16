@@ -1,0 +1,58 @@
+/*
+ * @Author: niumengfei
+ * @Date: 2022-04-30 18:54:06
+ * @LastEditors: niumengfei
+ * @LastEditTime: 2022-05-04 15:54:58
+ */
+console.log(__dirname)
+const path = require('path');
+const HtmlWebpackPlugins = require('html-webpack-plugin');
+
+module.exports = {
+    entry: './src/index.js',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'assets/js/bundle.js',
+        clean: true, //清除历史dist
+        assetModuleFilename: 'assets/images/[contenthash][ext][query]' //contenthash / name
+    },
+    mode: 'development', //none development
+    devtool: 'inline-source-map',
+    module: {
+        rules: [{ 
+            test: /\.png/, 
+            type: 'asset/resource', //resource 自然资源 import会导入一个路径
+            // 优先级高于 assetModuleFilename 
+            generator: { 
+                filename: 'assets/images/[contenthash][ext][query]' 
+            }
+        },{ 
+            test: /\.svg/, 
+            type: 'asset/inline' //inline 行内 线上 不会打包到资源里
+        },{ 
+            test: /\.txt/, //使用inline会出现base64数据流渲染到页面 使用source正常 使用resource会展示目录
+            //resource import = file:///D:/webpack-study/05-assets-module/dist/assets/js/../../assets/images/7da1604e40dc5f0fb6f8.txt
+            //inline import = data:text/plain;base64,aGVsbG8gd2VicGFjaw==
+            //source import = hello.wepack
+            type: 'asset/source' //source 资源，导出资源的源代码
+        },{ 
+            test: /\.jpg/, 
+            type: 'asset', //asset 自动选择
+            parser: { 
+                dataUrlCondition: { 
+                    maxSize: (638/1024) * 1024 * 1024 // 1kb = 1024 || 1MB = 1024 * 1024
+                } 
+            }   
+        }],
+    },
+    plugins: [
+        new HtmlWebpackPlugins({
+            filename: 'index.html', //文件名 可以指定到目录assets/index.html
+            template: 'index.html', //原html文件位置 //可以./index.html 也可以直接index.html
+            inject: 'head', //放在html的哪里 body head true / false
+        }),
+    ],
+    devServer: { 
+        static: './dist' 
+    }
+}
