@@ -1,0 +1,20 @@
+{
+  "name": "5.1-tree-shaking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "mysemsg": "true:没有文件可以tree-shaking false:所有未经使用的文件都可以tree-shaking,使用过的不能tree-shaking",
+  "sideEffects": false,  
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2"
+  }
+}

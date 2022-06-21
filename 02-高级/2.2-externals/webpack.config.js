@@ -2,7 +2,7 @@
  * @Author: niumengfei
  * @Date: 2022-06-19 18:01:03
  * @LastEditors: niumengfei
- * @LastEditTime: 2022-06-19 18:21:45
+ * @LastEditTime: 2022-06-21 10:15:38
  */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -14,7 +14,7 @@ module.exports = {
             // template: 'index.html', //原html文件位置 //可以./index.html 也可以直接index.html
         }),
     ],
-    externalsType: 'script',
+    externalsType: 'script', //扩展标签文件格式
     externals: {
         // jquery: '$', // $ 或者 jQuery 都可以 因为CDN链接执行后 全局window上已经有了$和jQuery
         jquery: [
